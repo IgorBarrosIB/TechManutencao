@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacStore Pro - Especialistas em Apple</title>
+    <meta name="description" content="MacStore Pro - Venda e manutenção especializada em produtos Apple. MacBook, iMac, iPad. Assistência técnica autorizada e produtos originais.">
+    <meta name="keywords" content="apple, macbook, imac, ipad, manutenção apple, assistência técnica apple, venda macbook">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M74.7 22.5c-1.9-2.4-4.6-3.8-7.4-3.8-1.1 0-2.1.2-3.1.6-2.8 1.1-5.1 3.4-6.4 6.4-.9 2.1-1.2 4.4-.8 6.6.6 2.9 2.3 5.4 4.7 7.1 1.8 1.3 4 2 6.2 2 .8 0 1.6-.1 2.4-.3 2.9-.7 5.4-2.5 7-4.9 1.4-2.1 2.1-4.6 1.9-7.1-.3-3.1-1.7-6-4.1-8.1zm-26 55.8c-1.4 2.8-3.4 5.2-6 6.9-2.4 1.6-5.2 2.4-8.1 2.4-1.9 0-3.8-.4-5.6-1.2-3.2-1.4-5.9-3.9-7.6-7.1-1.6-3-2.3-6.3-2.1-9.6.2-3.8 1.4-7.4 3.5-10.4 2.2-3.2 5.2-5.7 8.6-7.2 2.5-1.1 5.2-1.6 7.9-1.6 2.1 0 4.1.3 6 1 3.4 1.2 6.3 3.4 8.3 6.3 1.8 2.6 2.8 5.6 2.9 8.7.1 3.5-.7 6.9-2.3 10zm4.8-38.7c-3.2-1.8-6.8-2.7-10.5-2.7-4.2 0-8.3 1.1-11.9 3.3-3.2 1.9-5.9 4.6-7.8 7.8-1.7 2.9-2.6 6.2-2.6 9.5 0 2.8.5 5.5 1.6 8 1.9 4.4 5.2 8 9.3 10.3 3 1.7 6.4 2.6 9.8 2.6 3.8 0 7.5-1 10.8-3 2.9-1.7 5.4-4.1 7.2-6.9 1.6-2.5 2.4-5.4 2.4-8.3 0-3.4-.9-6.7-2.6-9.6-2.1-3.5-5.2-6.4-8.9-8.2z' fill='%23007AFF'/></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Apple-inspired Colors */
+            --apple-blue: #007AFF;
+            --apple-blue-dark: #0051D5;
+            --apple-gray-100: #F5F5F7;
+            --apple-gray-200: #E5E5EA;
+            --apple-gray-300: #D2D2D7;
+            --apple-gray-400: #8E8E93;
+            --apple-gray-500: #636366;
+            --apple-gray-600: #48484A;
+            --apple-gray-700: #2C2C2E;
+            --apple-gray-800: #1C1C1E;
+            --apple-gray-900: #000000;
+            
+            /* Background */
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --bg-dark: #1C1C1E;
+            --bg-card: #FFFFFF;
+            
+            /* Text */
+            --text-primary: #1D1D1F;
+            --text-secondary: #86868B;
+            --text-white: #FFFFFF;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-apple: 0 4px 16px rgba(0, 122, 255, 0.15);
+            
+            /* Layout */
+            --max-width: 1200px;
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Apple Typography */
+            --font-primary: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--apple-gray-200);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--apple-blue);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--apple-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--apple-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: var(--apple-blue);
+            color: var(--text-white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .cta-nav:hover {
+            background: var(--apple-blue-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-apple);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20%;
+            width: 80%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23007AFF;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%23007AFF;stop-opacity:0.05" /></linearGradient></defs><rect width="400" height="400" fill="url(%23grad1)"/><circle cx="320" cy="80" r="40" fill="%23007AFF" opacity="0.1"/><circle cx="360" cy="200" r="60" fill="%23007AFF" opacity="0.05"/><circle cx="280" cy="300" r="80" fill="%23007AFF" opacity="0.03"/></svg>') no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--apple-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 21px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--apple-blue);
+            color: var(--text-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--apple-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-apple);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--apple-gray-300);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            border-color: var(--apple-blue);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--apple-blue);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Product Showcase */
+        .hero-showcase {
+            position: absolute;
+            top: 50%;
+            right: 80px;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 500px;
+            z-index: 1;
+        }
+
+        .showcase-item {
+            position: absolute;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .showcase-item.macbook {
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 180px;
+            background: linear-gradient(135deg, #F5F5F7 0%, #E8E8ED 100%);
+        }
+
+        .showcase-item.ipad {
+            top: 120px;
+            right: 0;
+            width: 160px;
+            height: 220px;
+            background: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 100%);
+            color: white;
+        }
+
+        .showcase-item.accessories {
+            bottom: 0;
+            left: 40px;
+            width: 200px;
+            height: 140px;
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            color: white;
+        }
+
+        .showcase-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .showcase-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .showcase-price {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 19px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--bg-secondary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image {
+            height: 240px;
+            background: linear-gradient(135deg, var(--apple-gray-100) 0%, var(--apple-gray-200) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            color: var(--apple-gray-400);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image.macbook {
+            background: linear-gradient(135deg, #F5F5F7 0%, #E8E8ED 100%);
+        }
+
+        .product-image.imac {
+            background: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 100%);
+            color: white;
+        }
+
+        .product-image.ipad {
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            color: white;
+        }
+
+        .product-image.accessories {
+            background: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+            color: white;
+        }
+
+        .product-content {
+            padding: 24px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .product-description {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .product-features li {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 4px;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .product-features li::before {
+            content: '•';
+            color: var(--apple-blue);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--apple-blue);
+            margin-bottom: 16px;
+        }
+
+        .product-btn {
+            width: 100%;
+            background: var(--apple-blue);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .product-btn:hover {
+            background: var(--apple-blue-dark);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--apple-gray-200);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--apple-blue);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--apple-blue);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin: 0 auto 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-secondary);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .about-stat {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .about-stat .number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--apple-blue);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .about-stat .label {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-content {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--apple-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #FFD60A;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-secondary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            margin-top: 48px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--apple-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+
+        .contact-details p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* Form */
+        .form {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--apple-gray-300);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 16px;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--apple-blue);
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            background: var(--apple-blue);
+            color: var(--text-white);
+            padding: 16px 32px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .form-submit:hover {
+            background: var(--apple-blue-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--apple-gray-800);
+            color: var(--text-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-white);
+            font-size: 18px;
+        }
+
+        .footer-section p {
+            color: var(--apple-gray-300);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: var(--apple-gray-300);
+            text-decoration: none;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--apple-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--apple-gray-600);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--apple-gray-400);
+            font-size: 14px;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            color: white;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero-showcase {
+                display: none;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .section-subtitle {
+                font-size: 17px;
+            }
+
+            .products-grid,
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .nav {
+                padding: 8px 0;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .logo-icon {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        /* Selection */
+        ::selection {
+            background: rgba(0, 122, 255, 0.2);
+            color: var(--text-primary);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--apple-gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--apple-gray-400);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--apple-gray-500);
+        }
+
+        /* Focus */
+        *:focus {
+            outline: 2px solid var(--apple-blue);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">🍎</div>
+                    MacStore Pro
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <a href="#contato" class="cta-nav">Orçamento</a>
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-showcase">
+            <div class="showcase-item macbook">
+                <span class="showcase-icon">💻</span>
+                <div class="showcase-title">MacBook Pro</div>
+                <div class="showcase-price">A partir de R$ 8.999</div>
+            </div>
+            <div class="showcase-item ipad">
+                <span class="showcase-icon">📱</span>
+                <div class="showcase-title">iPad Pro</div>
+                <div class="showcase-price">A partir de R$ 4.999</div>
+            </div>
+            <div class="showcase-item accessories">
+                <span class="showcase-icon">🎧</span>
+                <div class="showcase-title">Acessórios</div>
+                <div class="showcase-price">Originais Apple</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Especialistas em Apple no Brasil</h1>
+                <p class="subtitle">Venda e manutenção especializada em produtos Apple. MacBook, iMac, iPad e acessórios com garantia e qualidade Apple Authorized.</p>
+                <div class="hero-buttons">
+                    <a href="#produtos" class="btn btn-primary">
+                        <span>🛍️</span>
+                        Ver Produtos
+                    </a>
+                    <a href="tel:+5511999887766" class="btn btn-secondary">
+                        <span>📞</span>
+                        (11) 99988-7766
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">Anos de experiência</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="2500">0</span>
+                        <span class="stat-label">Clientes atendidos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Garantia Apple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="produtos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Produtos Apple</h2>
+                <p class="section-subtitle">Linha completa de produtos Apple novos e seminovos com garantia</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-image macbook">💻</div>
+                    <div class="product-content">
+                        <h3 class="product-title">MacBook Pro & Air</h3>
+                        <p class="product-description">Linha completa de MacBooks para profissionais e estudantes</p>
+                        <ul class="product-features">
+                            <li>Chip M3, M2 e M1</li>
+                            <li>13", 14" e 16"</li>
+                            <li>Novos e seminovos</li>
+                            <li>Garantia de 1 ano</li>
+                        </ul>
+                        <div class="product-price">A partir de R$ 6.999</div>
+                        <button class="product-btn" onclick="openWhatsApp('MacBook Pro & Air')">Consultar Preços</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image imac">🖥️</div>
+                    <div class="product-content">
+                        <h3 class="product-title">iMac & Mac Studio</h3>
+                        <p class="product-description">Desktops Apple para trabalho profissional e criativo</p>
+                        <ul class="product-features">
+                            <li>iMac 24" coloridos</li>
+                            <li>Mac Studio compacto</li>
+                            <li>Performance profissional</li>
+                            <li>Tela Retina 5K</li>
+                        </ul>
+                        <div class="product-price">A partir de R$ 8.999</div>
+                        <button class="product-btn" onclick="openWhatsApp('iMac & Mac Studio')">Consultar Preços</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image ipad">📱</div>
+                    <div class="product-content">
+                        <h3 class="product-title">iPad & iPad Pro</h3>
+                        <p class="product-description">Tablets Apple para produtividade e entretenimento</p>
+                        <ul class="product-features">
+                            <li>iPad, Air e Pro</li>
+                            <li>Apple Pencil compatível</li>
+                            <li>Conectividade Wi-Fi e Cellular</li>
+                            <li>Várias capacidades</li>
+                        </ul>
+                        <div class="product-price">A partir de R$ 2.499</div>
+                        <button class="product-btn" onclick="openWhatsApp('iPad & iPad Pro')">Consultar Preços</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image accessories">🎧</div>
+                    <div class="product-content">
+                        <h3 class="product-title">Acessórios Apple</h3>
+                        <p class="product-description">Acessórios originais Apple para seus dispositivos</p>
+                        <ul class="product-features">
+                            <li>AirPods Pro e Max</li>
+                            <li>Magic Keyboard e Mouse</li>
+                            <li>Apple Pencil</li>
+                            <li>Carregadores originais</li>
+                        </ul>
+                        <div class="product-price">A partir de R$ 199</div>
+                        <button class="product-btn" onclick="openWhatsApp('Acessórios Apple')">Ver Acessórios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Serviços Especializados</h2>
+                <p class="section-subtitle">Manutenção e reparo com técnicos certificados Apple</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <h3>Reparo de MacBook</h3>
+                    <p>Conserto de tela, teclado, bateria, placa-mãe e todos os componentes do seu MacBook com peças originais.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">💾</div>
+                    <h3>Upgrade de Memória</h3>
+                    <p>Aumento de RAM e troca de HD para SSD para melhorar performance do seu Mac significativamente.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔋</div>
+                    <h3>Troca de Bateria</h3>
+                    <p>Substituição de bateria original Apple com garantia para MacBook, iPhone e iPad.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">📱</div>
+                    <h3>Reparo de iPad</h3>
+                    <p>Conserto de tela, botão home, alto-falantes e demais componentes do iPad com qualidade Apple.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🧹</div>
+                    <h3>Limpeza Técnica</h3>
+                    <p>Limpeza interna profissional, troca de pasta térmica e manutenção preventiva.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">💻</div>
+                    <h3>Formatação macOS</h3>
+                    <p>Instalação limpa do macOS, recuperação de dados e configuração completa do sistema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Sobre a MacStore Pro</h2>
+                <p class="section-subtitle">Especialistas Apple com certificação e experiência</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text slide-in-left">
+                    <h3>Especialistas Apple Certificados</h3>
+                    <p>A MacStore Pro é especializada exclusivamente em produtos Apple há mais de 8 anos. Nossa equipe possui certificação Apple e experiência técnica para garantir o melhor atendimento.</p>
+                    <p>Trabalhamos apenas com peças originais Apple e oferecemos garantia em todos os nossos serviços. Nossa missão é manter seu Mac funcionando perfeitamente.</p>
+                    <p>Localizada em São Paulo, atendemos clientes de todo o Brasil com envio seguro e suporte técnico especializado.</p>
+                </div>
+                <div class="about-stats slide-in-right">
+                    <div class="about-stat">
+                        <span class="number" data-count="8">0</span>
+                        <span class="label">Anos especializados</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="number" data-count="2500">0</span>
+                        <span class="label">Macs reparados</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="number" data-count="98">0</span>
+                        <span class="label">% Satisfação</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="number" data-count="24">0</span>
+                        <span class="label">Horas suporte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Depoimentos</h2>
+                <p class="section-subtitle">O que nossos clientes falam sobre nós</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-content">"Excelente atendimento! Meu MacBook Pro estava com problema na tela e eles resolveram rapidamente. Peças originais e garantia de verdade. Recomendo!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Marina Silva</h4>
+                            <p>Designer Gráfica</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-content">"Comprei um MacBook Air seminovo e chegou perfeito. Atendimento nota 10, preço justo e produto impecável. Já indiquei para amigos!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Roberto Santos</h4>
+                            <p>Desenvolvedor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-content">"Upgrade de SSD no meu iMac ficou perfeito. Performance incrível agora! Técnicos muito competentes e honestos. Voltarei sempre!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ana Costa</h4>
+                            <p>Fotógrafa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Solicite seu orçamento ou tire suas dúvidas</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info slide-in-left">
+                    <h3>Fale Conosco</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>(11) 99988-7766</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contato@macstorepro.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Localização</h4>
+                            <p>São Paulo - SP<br>Atendemos todo o Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h4>Horário</h4>
+                            <p>Seg-Sex: 9h às 18h<br>Sáb: 9h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form slide-in-right">
+                    <h3>Solicitar orçamento</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Tipo de interesse</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="compra-macbook">Comprar MacBook</option>
+                                <option value="compra-imac">Comprar iMac</option>
+                                <option value="compra-ipad">Comprar iPad</option>
+                                <option value="reparo-macbook">Reparo de MacBook</option>
+                                <option value="upgrade-mac">Upgrade de Mac</option>
+                                <option value="troca-bateria">Troca de bateria</option>
+                                <option value="outros">Outros serviços</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" placeholder="Descreva seu produto/problema, modelo do Mac, sintomas ou qualquer detalhe que considere importante..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Enviar via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>MacStore Pro</h4>
+                    <p>Especialistas em produtos Apple com mais de 8 anos de experiência. Vendas, manutenção e suporte técnico especializado.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#produtos">MacBook Pro & Air</a></li>
+                        <li><a href="#produtos">iMac & Mac Studio</a></li>
+                        <li><a href="#produtos">iPad & iPad Pro</a></li>
+                        <li><a href="#produtos">Acessórios Apple</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Reparo de MacBook</a></li>
+                        <li><a href="#servicos">Upgrade de memória</a></li>
+                        <li><a href="#servicos">Troca de bateria</a></li>
+                        <li><a href="#servicos">Limpeza técnica</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📱 (11) 99988-7766<br>
+                    📧 contato@macstorepro.com.br<br>
+                    📍 São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MacStore Pro. Todos os direitos reservados. Apple, MacBook, iMac, iPad são marcas registradas da Apple Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511999887766?text=Olá! Gostaria de saber mais sobre produtos e serviços Apple da MacStore Pro." class="whatsapp-btn" target="_blank">
+        💬
+    </a>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.8)';
+            }
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-count]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                    
+                    // Animate counters when they come into view
+                    if (entry.target.querySelector('[data-count]')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // WhatsApp integration functions
+        function openWhatsApp(product) {
+            const message = `Olá! Gostaria de saber mais informações sobre: ${product}`;
+            const whatsappURL = `https://wa.me/5511999887766?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Contact form
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+            const message = formData.get('message');
+            
+            let whatsappMessage = `*ORÇAMENTO MACSTORE PRO*\n\n`;
+            whatsappMessage += `Nome: ${name}\n`;
+            whatsappMessage += `Email: ${email}\n`;
+            whatsappMessage += `Telefone: ${phone}\n`;
+            whatsappMessage += `Interesse: ${service}\n\n`;
+            whatsappMessage += `Mensagem:\n${message}`;
+            
+            const whatsappURL = `https://wa.me/5511999887766?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, '_blank');
+            
+            // Success feedback
+            const submitBtn = this.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Redirecionando...';
+            submitBtn.style.background = '#25D366';
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                this.reset();
+            }, 2000);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            // Add mobile menu functionality here if needed
+            alert('Menu mobile em desenvolvimento. Use os links de navegação ou WhatsApp para contato.');
+        });
+
+        // Parallax effect for hero showcase
+        function handleParallax() {
+            const scrolled = window.pageYOffset;
+            const showcase = document.querySelector('.hero-showcase');
+            const items = document.querySelectorAll('.showcase-item');
+            
+            if (showcase && window.innerWidth > 1024) {
+                items.forEach((item, index) => {
+                    const speed = 0.3 + (index * 0.1);
+                    const yPos = scrolled * speed * 0.5;
+                    item.style.transform = `translateY(${yPos}px)`;
+                });
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            requestAnimationFrame(handleParallax);
+        });
+
+        // Product cards hover effect
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-12px) scale(1.02)';
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Service cards hover effect
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Initialize animations on page load
+        window.addEventListener('load', function() {
+            // Add initial load animations
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Start showcase animation
+            setTimeout(() => {
+                document.querySelectorAll('.showcase-item').forEach((item, index) => {
+                    item.style.animation = `fadeInUp 0.8s ease forwards`;
+                    item.style.animationDelay = `${index * 0.2}s`;
+                });
+            }, 1000);
+        });
+
+        // Add click tracking for analytics (if needed)
+        document.querySelectorAll('.product-btn, .btn, .cta-nav').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Add Google Analytics or Facebook Pixel tracking here
+                console.log('Button clicked:', this.textContent);
+            });
+        });
+
+        // Loading state for buttons
+        document.querySelectorAll('.product-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.opacity = '0.7';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
